@@ -30,7 +30,7 @@ import {
     scrollParents,
     within,
 } from 'uikit-util';
-import { isSameSiteAnchor, preventBackgroundScroll, preventOverscroll } from '../mixin/modal';
+import { isSameSiteAnchor, preventBackgroundScroll, preventOverscroll } from '../mixin/utils';
 
 export let active;
 

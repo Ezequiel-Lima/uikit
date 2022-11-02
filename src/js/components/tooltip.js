@@ -19,6 +19,7 @@ import {
     remove,
     within,
 } from 'uikit-util';
+import { generateId } from '../mixin/utils';
 
 export default {
     mixins: [Container, Togglable, Position],
@@ -40,7 +41,7 @@ export default {
     },
 
     beforeConnect() {
-        this.id = `uk-tooltip-${this._uid}`;
+        this.id = generateId(this);
         this._hasTitle = hasAttr(this.$el, 'title');
         attr(this.$el, {
             title: '',

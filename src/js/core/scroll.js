@@ -1,4 +1,5 @@
 import { $, off, on, scrollIntoView, trigger, within } from 'uikit-util';
+import { getTargetElement } from '../mixin/utils';
 
 export default {
     props: {
@@ -57,8 +58,4 @@ function clickHandler(e) {
             component.scrollTo(getTargetElement(component.$el));
         }
     }
-}
-
-export function getTargetElement(el) {
-    return document.getElementById(decodeURIComponent(el.hash).substring(1));
 }
